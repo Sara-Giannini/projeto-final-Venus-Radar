@@ -66,32 +66,29 @@ const addNew = async (req, res) => {
 
 const updateById = async (req, res) => {
     try {
-      const { nome, estado, cidade, categoria, descricao } = req.body
-      const updatedLocal = await Locais
-      .findByIdAndUpdate(req.params.id, {
-        nome, estado, cidade, categoria, descricao
-      })
-      res.status(200).json(updatedLocal)
+        const { nome, estado, cidade, categoria, descricao } = req.body
+        const updatedLocal = await Locais
+            .findByIdAndUpdate(req.params.id, {
+                nome, estado, cidade, categoria, descricao
+            })
+        res.status(200).json(updatedLocal)
     } catch (error) {
-      console.error(error)
-      res.status(500).json({ message: error.message })
+        console.error(error)
+        res.status(500).json({ message: error.message })
     }
-  }
+}
 
-  const deleteById = async (req, res) => {
+const deleteById = async (req, res) => {
     try {
         const { id } = req.params
         await Locais.findByIdAndDelete(id)
         const message = `deletado com sucesso`
-       res.status(200).json({ message })
+        res.status(200).json({ message })
     } catch (error) {
-      console.error(error)
-      res.status(500).json({ message: error.message })
+        console.error(error)
+        res.status(500).json({ message: error.message })
     }
- }
- 
-
-
+}
 
 
 module.exports = {

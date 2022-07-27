@@ -10,7 +10,7 @@ const localSchema = mongoose.Schema({
     cidade: { type: String, required: true },
     endereço: { type: String, required: true },
     categoria: { type: String, required: true },
-    descricao: {String}
+    descricao: { String }
 },
     { timestamps: true }
 )

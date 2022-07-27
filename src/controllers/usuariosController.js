@@ -1,6 +1,6 @@
-const Usuarios = require("../models/usuariosModel")
-const bcrypt = require("bcrypt")
-const jwt = require("jsonwebtoken")
+const Usuarios = require('../models/usuariosModel')
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 const SECRET = process.env.SECRET
 
 const newUser = (req, res) => {
@@ -19,13 +19,12 @@ const newUser = (req, res) => {
 const login = (req, res) => {
     Usuarios.findOne({ email: req.body.email }, function (error, usuario) {
         if (!usuario) {
-            return res.status(404).send("ainda não existe um usuario com este email.")
+            return res.status(404).send('ainda não existe um usuario com este email.')
         }
         const senhaValida = bcrypt.compareSync(req.body.senha, usuario.senha)
         if (!senhaValida) {
-            return res.status(403).send("senha inválida.")
+            return res.status(403).send('senha inválida.')
         }
-
         const token = jwt.sign({ email: req.body.email }, SECRET)
         res.status(200).send(token)
     })
@@ -49,7 +48,7 @@ const deleteUserById = async (req, res) => {
     try {
         const { id } = req.params
         await Usuarios.findByIdAndDelete(id)
-        res.status(200).json({ message: "usuário deletado." })
+        res.status(200).json({ message: 'usuário deletado.' })
     } catch (error) {
         console.error(error)
         res.status(500).json({ message: error.message })
