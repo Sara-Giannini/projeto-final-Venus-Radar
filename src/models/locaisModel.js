@@ -8,12 +8,13 @@ const localSchema = mongoose.Schema({
     nome: { type: String, required: true },
     estado: { type: String, required: true },
     cidade: { type: String, required: true },
-    endereço: { type: String, required: true },
+    endereco: { type: String, required: true },
     categoria: { type: String, required: true },
-    descricao: { String }
+    comentario: { String }
 },
     { timestamps: true }
 )
 
 const locais = mongoose.model('locais', localSchema)
 module.exports = locais
+

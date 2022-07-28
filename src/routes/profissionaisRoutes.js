@@ -11,3 +11,4 @@ router.delete('/profissional/delete/:id', controller.deleteProrById)
 
 module.exports = router
 
+

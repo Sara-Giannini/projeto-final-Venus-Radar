@@ -1,7 +1,7 @@
 const Usuarios = require('../models/usuariosModel')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const SECRET = process.env.SECRET
+const SECRET = `${process.env.TOKEN_SECRET}`
 
 const newUser = (req, res) => {
     const senhaComHash = bcrypt.hashSync(req.body.senha, 10)
@@ -16,24 +16,31 @@ const newUser = (req, res) => {
     })
 }
 
+
+
 const login = (req, res) => {
     Usuarios.findOne({ email: req.body.email }, function (error, usuario) {
-        if (!usuario) {
-            return res.status(404).send('ainda não existe um usuario com este email.')
-        }
-        const senhaValida = bcrypt.compareSync(req.body.senha, usuario.senha)
-        if (!senhaValida) {
-            return res.status(403).send('senha inválida.')
-        }
-        const token = jwt.sign({ email: req.body.email }, SECRET)
-        res.status(200).send(token)
+      if (error) {
+        return res.status(500).send({ message: "Usuário não encontrado." })
+      }
+      if (!usuario) {
+        return res
+          .status(404)
+          .send(`Ainda não existe um usuário com este email.: ${email}`)
+      }
+      const senhaValida = bcrypt.compareSync(req.body.senha, usuario.senha)
+      if (!senhaValida) {
+        return res.status(403).send("Senha incorreta..")
+      }
+      const token = jwt.sign({ email: req.body.email }, SECRET)
+      return res.status(200).send(token)
     })
-}
+  }
 
 const updateUserById = async (req, res) => {
     try {
         const { nome, email, senha } = req.body
-        const updateUserById = await usuariosModel
+        const updateUserById = await Usuarios
             .findByIdAndUpdate(req.params.id, {
                 nome, email, senha
             })

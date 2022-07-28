@@ -1,15 +1,14 @@
 const Profissionais = require('../models/profissionaisModel')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
-const profissionais = require('../models/profissionaisModel')
-const SECRET = process.env.SECRET
+const SECRET = `${process.env.TOKEN_SECRET}`
 
 const getAllPro = (req, res) => {
     Profissionais.find(function (err, profissionais) {
         if (err) {
             res.status(500).send({ message: err.message })
         }
-        res.status(200).send(locais)
+        res.status(200).send(profissionais)
     })
 }
 
@@ -53,7 +52,7 @@ const loginPro = (req, res) => {
 const updateProById = async (req, res) => {
     try {
         const { nome, email, senha, ocupacao } = req.body
-        const updateProById = await profissionaisModel
+        const updateProById = await Profissionais
             .findByIdAndUpdate(req.params.id, {
                 nome, email, senha, ocupacao
             })
