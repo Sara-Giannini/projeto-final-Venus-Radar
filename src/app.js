@@ -17,4 +17,10 @@ app.use(locaisRoutes)
 app.use(usuariosRoutes)
 app.use(profissionaisRoutes)
 
+const swaggerUi = require('swagger-ui-express');
+
+const swaggerFile = require('../swagger/swagger_output.json');
+
+app.use('/minha-rota-de-documentacao', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+
 module.exports = app
