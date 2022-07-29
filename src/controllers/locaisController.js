@@ -89,7 +89,6 @@ const deleteById = async (req, res) => {
     }
 }
 
-
 module.exports = {
     getAll,
     getById,
