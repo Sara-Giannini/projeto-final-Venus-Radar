@@ -1,5 +1,5 @@
 {
-  "name": "projetofinal",
+  "name": "venus-radar",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sara-Giannini/projeto-final-RADAR-DELAS.git"
+    "url": "https://github.com/Sara-Giannini/projeto-final-Venus-Radar" 
   },
   "keywords": [],
-  "author": "",
+  "author": "Sara Giannini",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Sara-Giannini/projeto-final-RADAR-DELAS/issues"
+    "url": "https://github.com/Sara-Giannini/projeto-final-Venus-Radar/issues"
   },
-  "homepage": "https://github.com/Sara-Giannini/projeto-final-RADAR-DELAS#readme",
+  "homepage": "https://github.com/Sara-Giannini/projeto-final-Venus-Radar#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
