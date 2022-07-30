@@ -89,6 +89,10 @@ dotenv | Dependência  para gerenciar facilmente variáveis de ambiente, não é
 swagger | Gera a documentação.
 heroku | hospeda a documentação.
 
+- Você pode visualizar meu [Swagger aqui](https://venus-radar.herokuapp.com/minha-rota-de-documentacao/#/).
+- Você pode visualizar meu [Heroku aqui](https://venus-radar.herokuapp.com/).
+
+
 ## 🪄 Preparando o Ambiente Para o Projeto
 📍 Para executar este projeto, é necessário ter instalado o Node.js e as dependências do npm.
 - Clonar este repositório através do comando no terminal:
