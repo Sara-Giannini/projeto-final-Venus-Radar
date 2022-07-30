@@ -205,10 +205,13 @@ DELETE | /profissional/delete/:id | Deleta profissional por ID | 200 | ✔
 </h1></br>
 
 ## 👩🏻‍🦰 Autora
+
 <p align="center">
-<img src="IMG/foto-sara.gif" alt="Foto de perfil de Sara" width="500">
+<img src="IMG/fotoSara" alt="Foto de Sara" width="500">
 </p> <p align="center"> </p>
 </h1></br>
+
+
 # <p align="center">Desenvolvido por <a href="https://www.linkedin.com/in/sara-giannini-461625235/-461625235/" target="_blank"><img src="https://img.shields.io/badge/-Sara Giannini-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a></p>
 
 
