@@ -151,3 +151,64 @@ Deleta usuário por ID `http://localhost:3030/usuario/delete/:id`
 <img src="IMG/userdelete.png" alt="Deleta usuário por ID" width="500">
 </p> <p align="center"> </p>
 </h1></br>
+
+
+## 🔒 Preparando o Ambiente Para Autenticação
+⚠️ Criar arquivo `.env` (adicionar no `.gitignore`) e usar o arquivo `.env.example` como modelo, colocando assim os seus dados.
+
+Seguir a ordem de instalações no terminal:
+
+   Inicialize o comando de instalação `npm i express cors` para instalar o cors.
+   Inicialize o comando de instalação `npm i --save-dev dotenv` para instalar dontenv.
+   Inicialize com o comando `npm start` para que você possa executar os testes.
+
+## 🔐 Testando Rotas de Login e Proteção das Rotas
+
+📌 Todas as rotas do projeto:
+
+- ### Locais
+Verbo | EndPoint | Descrição da Rota | Status | Auth
+-- | -- | -- | -- | --
+GET | /locais | Retorna todos os locais | 200 | ❌
+GET | /locais/:id | Retorna local por ID | 200 | ❌
+GET | /estados | Retorna local por estado | 200 | ❌
+GET | /cidades | Retorna local por cidade | 200 | ❌
+GET | /categoria | Retorna local por categoria | 200 | ❌
+POST | /novo/local |Adiciona novo local | 201 | ❌
+PATCH | /local/update | Atualiza local por ID | 200 | ✔
+DELETE | /local/delete/:id | Deleta local por ID | 200 | ✔
+
+- ### Pessoas Usuárias
+
+Verbo | EndPoint | Descrição da Rota | Status | Auth
+-- | -- | -- | -- | --
+POST | /usuario | Realiza cadastro de nova pessoa usuária | 201 | ✔
+POST | /usuario/login | Realiza login e retorna token de usuário| 200 | ✔
+PATCH | /usuario/update/:id | Atualiza pessoa usuária por ID | 200 | ✔
+DELETE | /usuario/delete/:id | Deleta pessoa usuária por ID | 200 | ✔
+
+- ### Profissionais 
+
+Verbo | EndPoint | Descrição da Rota | Status | Auth
+-- | -- | -- | -- | --
+GET | /profissionais | Retorna todos os profissionais | 200 | ❌
+GET | /profissionais/ocupacao | Retorna Profissionais por ocupação | 200 | ❌
+POST | /profissional | Realiza cadastro de novo profissional | 201 | ✔
+POST | /profissional/login | Realiza login e retorna token de profissional | 200 | ✔
+PATCH | /profissional/update/:id | Atualiza profissional por ID | 200 | ✔
+DELETE | /profissional/delete/:id | Deleta profissional por ID | 200 | ✔
+
+# <p align="center">✨ Muito obrigada por chegar até aqui ✨</p>
+<p align="center">
+<img src="IMG/imagem2.gif" alt="Muito obrigada por chegar até aqui" width="500">
+</p> <p align="center"> </p>
+</h1></br>
+
+## 👩🏻‍🦰 Autora
+<p align="center">
+<img src="IMG/foto-sara.gif" alt="Foto de perfil de Sara" width="500">
+</p> <p align="center"> </p>
+</h1></br>
+# <p align="center">Desenvolvido por <a href="https://www.linkedin.com/in/sara-giannini-461625235/-461625235/" target="_blank"><img src="https://img.shields.io/badge/-Sara Giannini-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a></p>
+
+
