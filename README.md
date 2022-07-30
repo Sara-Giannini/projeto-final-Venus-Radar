@@ -178,7 +178,7 @@ GET | /locais/:id | Retorna local por ID | 200 | ❌
 GET | /estados | Retorna local por estado | 200 | ❌
 GET | /cidades | Retorna local por cidade | 200 | ❌
 GET | /categoria | Retorna local por categoria | 200 | ❌
-POST | /novo/local |Adiciona novo local | 201 | ❌
+POST | /novo/local |Adiciona novo local | 201 | ✔
 PATCH | /local/update | Atualiza local por ID | 200 | ✔
 DELETE | /local/delete/:id | Deleta local por ID | 200 | ✔
 
