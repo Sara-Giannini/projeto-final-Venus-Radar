@@ -1,4 +1,5 @@
 require('dotenv-safe').config()
+const index = require('./routes/index.js')
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('./database/mongooseConnect')
@@ -22,5 +23,6 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('../swagger/swagger_output.json');
 
 app.use('/minha-rota-de-documentacao', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+app.use('/', index);
 
 module.exports = app
