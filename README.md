@@ -207,7 +207,7 @@ DELETE | /profissional/delete/:id | Deleta profissional por ID | 200 | ✔
 ## 👩🏻‍🦰 Autora
 
 <p align="center">
-<img src="IMG/fotoSara" alt="Foto de Sara" width="500">
+<img src="IMG/fotoSara.jpg" alt="Foto de Sara" width="500">
 </p> <p align="center"> </p>
 </h1></br>
 
