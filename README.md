@@ -22,7 +22,7 @@
 ## ♀️Vênus Radar
 
 A violência Obstétrica e Ginecológica, assim como em outras áreas da saúde como em exames preventivos é muito recorrente. Sejam agressões físicas, psicológicas, moral, abusos, violação, preconceitos, racismo ou trabsfobia. Infelizmente, muitas dessas agressões são silenciadas ou até mesmo desacreditadas.
-O projeto Vênus Radar tem como objetivo a criação de um banco de dados e API, ao qual a pessoa usuária pode se cadastrar com e-mail e senha, incluir a Clínica ao qual sofreu a violência a fim de encorajar denúncias, bem como listar Clínicas por cidade, estado ou categoria (Obstétrica , Ginecológica, etc), com a finalidade de alertar outras pessoas pacientes e buscar uma rede de apoio. Além disso, a API conta com uma busca por profissionais voluntários, aos quais podem se cadastrar com e-mail e senha informando sua ocupação (Obstetra, Ginecologista, Psicólogo, etc) a fim de oferecer auxílio e apoio médico e psicológico para as vítimas, oferecendo à pessoa usuária uma busca por profissionais de acordo com a ocupação que a mesma necessita.
+O projeto Vênus Radar tem como objetivo a criação de um banco de dados e API, ao qual a pessoa usuária pode se cadastrar com e-mail e senha, incluir a Clínica ao qual sofreu a violência anonimamente a fim de encorajar denúncias, bem como listar Clínicas por cidade, estado ou categoria (Obstétrica , Ginecológica, etc), com a finalidade de alertar outras pessoas pacientes e buscar uma rede de apoio. Além disso, a API conta com uma busca por profissionais voluntários, aos quais podem se cadastrar com e-mail e senha informando sua ocupação (Obstetra, Ginecologista, Psicólogo, etc) a fim de oferecer auxílio e apoio médico e psicológico para as vítimas, oferecendo à pessoa usuária uma busca por profissionais de acordo com a ocupação que a mesma necessita.
 
 
  ## 📁 Arquitetura Final
@@ -104,4 +104,50 @@ heroku | hospeda a documentação.
 - `npm install bcrypt --save`
 - Inicialize com o comando `npm start` para executar o servidor localmente.
 
-🔓 Interface Gráfica Para Realizar os Testes de Rotas
+## 🔓 Interface Gráfica Para Realizar os Testes de Rotas
+
+📍 Este projeto está com os métodos HTTP organizados. Você pode testar as rotas Get, Post, Patch e Delete através de qualquer ferramenta cliente API REST, como Insomnia, Thunder Client, [Postman](https://www.postman.com/downloads/), entre outros. Nesse projeto, utilizamos o Postman.
+
+### - GET
+
+Retorna todos os locais `http://localhost:3030/locais`
+<p align="center">
+<img src="IMG/listalocais.gif" alt="Retorna todos os locais" width="500">
+</p> <p align="center"> </p>
+</h1></br>
+
+Retorna todos os locais por estado `http://localhost:3030/estados?estado`
+<p align="center">
+<img src="IMG/estado.gif" alt="Retorna todos os locais por estado" width="500">
+</p> <p align="center"> </p>
+</h1></br>
+
+Retorna todos os profissionais por ocupação `http://localhost:3030/profissionais/ocupacao`
+<p align="center">
+<img src="IMG/ocupacao.gif" alt="Retorna todos os profissionais por ocupação" width="500">
+</p> <p align="center"> </p>
+</h1></br>
+
+### - POST
+
+Realiza cadastro de novo usuário `http://localhost:3030/usuario`
+<p align="center">
+<img src="IMG/criauser.png" alt="Realiza cadastro de novo usuário" width="500">
+</p> <p align="center"> </p>
+</h1></br>
+
+### - PATCH
+
+Atualiza profissional por ID `http://localhost:3030/profissional/update/:id`
+<p align="center">
+<img src="IMG/updatepro.png" alt="Atualiza profissional por ID" width="500">
+</p> <p align="center"> </p>
+</h1></br>
+
+### - DELETE
+
+Deleta usuário por ID `http://localhost:3030/usuario/delete/:id`
+<p align="center">
+<img src="IMG/userdelete.png" alt="Deleta usuário por ID" width="500">
+</p> <p align="center"> </p>
+</h1></br>
